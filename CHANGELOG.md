@@ -3,6 +3,7 @@
 ## Unreleased
 
 :wrench: **Fixes**
+
 - Use paragraphs for error messages ([PR 1030](https://github.com/nhsuk/nhsuk-frontend/pull/1030), [Fixes 1029](https://github.com/nhsuk/nhsuk-frontend/issues/1029))
 
 ## 9.0.0 - 18 September 2024
