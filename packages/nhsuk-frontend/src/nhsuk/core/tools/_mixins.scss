@@ -24,8 +24,6 @@
   }
 }
 
-
-
 /// Reading width mixin, add a maximum width
 /// to large pieces of content
 ///
@@ -36,8 +34,6 @@
 @mixin nhsuk-reading-width {
   max-width: 44em;
 }
-
-
 
 /// Helper function containing the common code for the following two mixins
 ///
@@ -105,8 +101,6 @@
   }
 }
 
-
-
 /// Hide an element visually, but have it available for screen readers whilst
 /// allowing the element to be focused when navigated to via the keyboard (e.g.
 /// for the skip link)
@@ -121,10 +115,6 @@
     @include _nhsuk-visually-hide-content($important: $important);
   }
 }
-
-
-
-
 
 /// Top and bottom margin mixin, remove
 /// the top and bottom margin spacing
@@ -142,8 +132,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 /// Panel mixin
 ///
@@ -171,8 +159,6 @@
   }
 }
 
-
-
 /// Panel with label mixin, inherits panel styling
 /// and removes padding top for the label positioning
 ///
@@ -193,8 +179,6 @@
   @include nhsuk-responsive-margin(7, "top");
   @include nhsuk-responsive-padding(5);
 }
-
-
 
 /// Heading label mixin, adds a tab heading to
 /// warning callout, do and don't lists and panel
@@ -240,8 +224,6 @@
   }
 }
 
-
-
 /// Care card mixin, used for creating
 /// different coloured care cards
 ///
@@ -265,8 +247,6 @@
   }
 }
 
-
-
 /// Print colour mixin, sets the text print colour
 /// warning callout, do and don't lists and panels
 ///
@@ -283,10 +263,6 @@
   }
 }
 
-
-
-
-
 /// Print hide mixin, hides the element from print
 ///
 /// @example scss
@@ -299,8 +275,6 @@
   }
 }
 
-
-
 /// Flex mixin
 ///
 /// @example scss
@@ -311,8 +285,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-
 
 /// Flex item mixin
 ///
@@ -328,8 +300,6 @@
   }
 }
 
-
-
 /// Remove margin mobile mixin
 ///
 /// Removes left and right margin at tablet breakpoint
@@ -340,8 +310,6 @@
     margin-right: -$nhsuk-gutter-half;
   }
 }
-
-
 
 /// NHS logo size helper
 ///
