@@ -108,7 +108,7 @@ createAll(Checkboxes, $element)
 
 Similarly, the existing `initAll` function can also configure components by including key-value pairs of camel-cased component names with their options:
 
-```js
+```mjs
 import { initAll } from 'nhsuk-frontend'
 
 initAll({
@@ -296,7 +296,7 @@ initCheckboxes();
 
 Or alternatively, you can initialise individual component classes:
 
-```js
+```mjs
 import { Button, Checkboxes } from 'nhsuk-frontend';
 
 const $button = document.querySelector('.app-button')
