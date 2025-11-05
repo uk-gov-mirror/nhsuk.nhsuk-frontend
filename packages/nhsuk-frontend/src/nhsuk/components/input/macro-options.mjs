@@ -251,7 +251,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your full name?',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       name: 'example'
@@ -262,7 +262,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       hint: {
@@ -280,7 +280,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       errorMessage: {
@@ -297,7 +297,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       hint: {
@@ -391,7 +391,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--s',
+        size: 's',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -405,7 +405,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--m',
+        size: 'm',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -419,7 +419,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -433,7 +433,7 @@ export const examples = {
     context: {
       label: {
         text: 'What is your NHS number?',
-        classes: 'nhsuk-label--xl',
+        size: 'xl',
         isPageHeading: true
       },
       id: 'custom-size',

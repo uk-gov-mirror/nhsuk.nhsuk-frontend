@@ -69,7 +69,7 @@ export const examples = {
   'default': {
     context: {
       text: 'What is your full name?',
-      classes: 'nhsuk-label--l',
+      size: 'l',
       isPageHeading: true
     },
     screenshot: {
@@ -79,7 +79,7 @@ export const examples = {
   'size XL': {
     context: {
       text: 'What is your full name?',
-      classes: 'nhsuk-label--xl',
+      size: 'xl',
       isPageHeading: true
     },
     screenshot: {
@@ -89,7 +89,7 @@ export const examples = {
   'size L': {
     context: {
       text: 'What is your full name?',
-      classes: 'nhsuk-label--l',
+      size: 'l',
       isPageHeading: true
     },
     screenshot: {
@@ -99,7 +99,7 @@ export const examples = {
   'size M': {
     context: {
       text: 'What is your full name?',
-      classes: 'nhsuk-label--m',
+      size: 'm',
       isPageHeading: true
     },
     screenshot: {
@@ -109,7 +109,7 @@ export const examples = {
   'size S': {
     context: {
       text: 'What is your full name?',
-      classes: 'nhsuk-label--s',
+      size: 's',
       isPageHeading: true
     }
   },

@@ -286,7 +286,7 @@ export const examples = {
     context: {
       label: {
         text: 'Sort by',
-        classes: 'nhsuk-label--s',
+        size: 's',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -315,7 +315,7 @@ export const examples = {
     context: {
       label: {
         text: 'Sort by',
-        classes: 'nhsuk-label--m',
+        size: 'm',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -344,7 +344,7 @@ export const examples = {
     context: {
       label: {
         text: 'Sort by',
-        classes: 'nhsuk-label--l',
+        size: 'l',
         isPageHeading: true
       },
       id: 'custom-size',
@@ -373,7 +373,7 @@ export const examples = {
     context: {
       label: {
         text: 'Sort by',
-        classes: 'nhsuk-label--xl',
+        size: 'xl',
         isPageHeading: true
       },
       id: 'custom-size',
