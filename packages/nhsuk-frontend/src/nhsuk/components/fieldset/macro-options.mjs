@@ -65,7 +65,7 @@ export const examples = {
     context: {
       legend: {
         text: 'What is your address?',
-        classes: 'nhsuk-fieldset__legend--l',
+        size: 'l',
         isPageHeading: true
       }
     },
@@ -120,7 +120,7 @@ export const examples = {
     context: {
       legend: {
         text: 'What is your address?',
-        classes: 'nhsuk-fieldset__legend--xl',
+        size: 'xl',
         isPageHeading: true
       }
     }
@@ -129,7 +129,7 @@ export const examples = {
     context: {
       legend: {
         text: 'What is your address?',
-        classes: 'nhsuk-fieldset__legend--l',
+        size: 'l',
         isPageHeading: true
       }
     }
@@ -138,7 +138,7 @@ export const examples = {
     context: {
       legend: {
         text: 'What is your address?',
-        classes: 'nhsuk-fieldset__legend--m',
+        size: 'm',
         isPageHeading: true
       }
     }
@@ -147,7 +147,7 @@ export const examples = {
     context: {
       legend: {
         text: 'What is your address?',
-        classes: 'nhsuk-fieldset__legend--s',
+        size: 's',
         isPageHeading: true
       }
     }
