@@ -138,6 +138,21 @@ export const examples = {
       isPageHeading: true
     }
   },
+  'size class': {
+    context: {
+      text: 'What is your full name?',
+      classes: 'nhsuk-label--l',
+      isPageHeading: true
+    }
+  },
+  'size class overriding size param': {
+    context: {
+      text: 'What is your full name?',
+      classes: 'nhsuk-label--l',
+      size: 's',
+      isPageHeading: true
+    }
+  },
   'without page heading': {
     context: {
       text: 'What is your full name?'
