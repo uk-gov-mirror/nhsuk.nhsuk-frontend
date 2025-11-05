@@ -83,6 +83,24 @@ export const examples = {
       viewports: ['mobile', 'tablet', 'desktop']
     }
   },
+  'heading level 1': {
+    context: {
+      legend: {
+        text: 'What is your full name?',
+        size: 'l',
+        headingLevel: 1
+      }
+    }
+  },
+  'heading level 2': {
+    context: {
+      legend: {
+        text: 'What is your full name?',
+        size: 'm',
+        headingLevel: 2
+      }
+    }
+  },
   'size XL': {
     context: {
       text: 'What is your full name?',
