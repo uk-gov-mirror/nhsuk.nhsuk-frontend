@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+### :wastebasket: **Deprecated features**
+
+#### Rename Sass variable for base font size
+
+If you use the Sass `$nhsuk-base-font-size` variable, you should rename it to `$nhsuk-root-font-size`.
+
+The previous name is deprecated and will be removed in a future release.
+
+This change was introduced in [pull request #1669: Remove pixel font sizes where unnecessary](https://github.com/nhsuk/nhsuk-frontend/pull/1669).
+
 ### :recycle: **Changes**
 
 #### Remove global box sizing reset
@@ -18,6 +28,7 @@ This change was introduced in pull requests [#1633: Review global `box-sizing` u
 - [#1635: Resolve Nunjucks template issues flagged by Jinja port](https://github.com/nhsuk/nhsuk-frontend/pull/1635)
 - [#1653: Only show a task list item if not empty](https://github.com/nhsuk/nhsuk-frontend/pull/1653)
 - [#1657: Fix inconsistent margin in form and button groups](https://github.com/nhsuk/nhsuk-frontend/pull/1657)
+- [#1669: Remove pixel font sizes where unnecessary](https://github.com/nhsuk/nhsuk-frontend/pull/1669)
 
 ## 10.1.0 - 15 October 2025
 
