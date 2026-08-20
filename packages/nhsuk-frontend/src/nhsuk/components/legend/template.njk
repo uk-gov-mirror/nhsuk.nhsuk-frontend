@@ -1,3 +1,4 @@
+{% from "nhsuk/components/caption/macro.njk" import caption as nhsukCaption %}
 {% from "nhsuk/components/heading/macro.njk" import heading as nhsukHeading %}
 {% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 
@@ -32,7 +33,7 @@
   text: params.text,
   html: params.html,
   visuallyHiddenText: params.visuallyHiddenText,
-  caption: caption,
+  caption: caption if not caption.placement or caption.placement in ["start", "end"] else undefined,
   size: params.size,
   classes: params.classes,
   attributes: params.attributes
@@ -87,5 +88,8 @@
     attributes: legend.attributes,
     element: "legend"
   }) | trim }}
+{% endif %}
+{% if caption.placement == "after" %}
+{{ nhsukCaption(caption) | safe | trim }}
 {% endif %}
 {% endif %}
