@@ -13,9 +13,8 @@ const fixtures = {
   "default": {
     context: {
       legend: {
-        text: "What is your address?",
-        size: "l",
-        isPageHeading: true
+        heading: "What is your address?",
+        size: "l"
       }
     },
     screenshot: true
@@ -24,9 +23,8 @@ const fixtures = {
     context: {
       legend: {
         caption: "About you",
-        text: "What is your address?",
-        size: "l",
-        isPageHeading: true
+        heading: "What is your address?",
+        size: "l"
       },
       html: outdent`
         ${components.render("input", inputExamples["example address line 1"])}
@@ -43,9 +41,8 @@ const fixtures = {
     context: {
       legend: {
         caption: "About you",
-        text: "What is your address?",
-        size: "l",
-        isPageHeading: true
+        heading: "What is your address?",
+        size: "l"
       }
     },
     callBlock: outdent`
