@@ -52,7 +52,18 @@ const fixtures = {
       ]
     }
   },
-  "with title HTML": {
+  "with heading as string": {
+    context: {
+      heading: "There is a problem",
+      errorList: [
+        {
+          text: "Date of birth must be in the past",
+          href: "#example-day"
+        }
+      ]
+    }
+  },
+  "with heading HTML": {
     context: {
       heading: {
         html: "There is a <span>problem</span>"
