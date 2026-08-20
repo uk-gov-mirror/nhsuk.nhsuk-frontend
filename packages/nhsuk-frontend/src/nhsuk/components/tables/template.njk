@@ -21,6 +21,12 @@
   classes: params.captionClasses
 } -%}
 
+{#- Support heading caption as string #}
+{%- set headingCaption = caption.caption if caption.caption is mapping and caption.caption is not escaped else {
+  text: caption.caption if caption.caption is string else undefined,
+  html: caption.caption if caption.caption is escaped else undefined
+} -%}
+
 {%- if variant == "reverse" and (
   not params.classes or (
     not "nhsuk-table--reverse" in params.classes and
@@ -222,7 +228,16 @@
     text: caption.text,
     html: caption.html,
     visuallyHiddenText: "(" ~ captionVisuallyHiddenText ~ ")" if captionVisuallyHiddenText else undefined,
-    caption: caption.caption,
+    caption: {
+      id: headingCaption.id,
+      text: headingCaption.text,
+      html: headingCaption.html,
+      placement: headingCaption.placement if not headingCaption.placement or
+        headingCaption.placement in ["start", "end"] else undefined,
+      size: headingCaption.size | default(params.size),
+      classes: headingCaption.classes,
+      attributes: headingCaption.attributes
+    },
     size: caption.size,
     sizes: ["s", "m", "l", "xl"],
     className: classNamesCaption,
