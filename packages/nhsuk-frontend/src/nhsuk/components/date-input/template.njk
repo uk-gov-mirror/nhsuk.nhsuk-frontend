@@ -195,7 +195,7 @@
     radio buttons or checkboxes. -#}
   {{ nhsukFieldset({
     legend: params.fieldset.legend,
-    html: innerHtml | trim,
+    html: innerHtml,
     id: params.fieldset.id,
     role: params.fieldset.role | default("group"),
     describedBy: describedBy,
