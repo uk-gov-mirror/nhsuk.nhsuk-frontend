@@ -1,6 +1,7 @@
 {% from "nhsuk/components/caption/macro.njk" import caption as nhsukCaption %}
 {% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 {% from "nhsuk/macros/content.njk" import nhsukContent %}
+{% from "nhsuk/macros/slot.njk" import nhsukSlot %}
 
 {#- Set classes for this component #}
 {%- set className = params.className | default("nhsuk-heading", true) -%}
@@ -48,17 +49,24 @@
   placement: headingCaption.placement,
   size: headingCaption.size | default(size),
   classes: headingCaption.classes,
-  attributes: headingCaption.attributes
+  attributes: headingCaption.attributes,
+  slots: headingCaption.slots
 } %}
 
 {%- set hasCaption = caption.text or caption.html -%}
+
+{{- nhsukSlot("before", params) -}}
 
 {%- if caller or params.html or params.text %}
 {%- set content = {
   text: params.text,
   html: params.html,
   visuallyHidden: params.visuallyHiddenText,
-  href: params.href
+  href: params.href,
+  slots: {
+    start: params.slots.start,
+    end: params.slots.end
+  }
 } -%}
 
 {% if caption.placement == "before" %}
@@ -101,3 +109,5 @@
   {{- nhsukCaption(caption) | safe | trim }}
 {% endif %}
 {% endif %}
+
+{{- nhsukSlot("after", params) -}}
