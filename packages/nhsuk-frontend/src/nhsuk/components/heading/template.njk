@@ -1,4 +1,5 @@
 {% from "nhsuk/components/caption/macro.njk" import caption as nhsukCaption %}
+{% from "nhsuk/components/link/macro.njk" import link as nhsukLink %}
 {% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 {% from "nhsuk/macros/visually-hidden.njk" import nhsukVisuallyHidden %}
 
@@ -63,11 +64,12 @@
 {% endset %}
 
 {%- set innerHtml %}
-  {%- if params.href -%}
-    <a class="nhsuk-link" href="{{ params.href }}">
-      {{- innerHtml | safe | trim -}}
-    </a>
-  {%- else %}
+  {%- if params.href %}
+    {{- nhsukLink({
+      href: params.href,
+      html: innerHtml
+    }) | trim -}}
+  {% else %}
     {{- innerHtml | safe | trim -}}
   {% endif -%}
 {% endset %}
