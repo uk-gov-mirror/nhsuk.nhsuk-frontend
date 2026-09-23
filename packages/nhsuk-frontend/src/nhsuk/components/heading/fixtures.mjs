@@ -141,13 +141,13 @@ const fixtures = {
       viewports: ["tablet"]
     }
   },
-  "size class": {
+  "with size class": {
     context: {
       text: "What is your full name?",
       classes: "nhsuk-heading-l"
     }
   },
-  "size class overriding size option": {
+  "with size class overriding size option": {
     context: {
       text: "What is your full name?",
       classes: "nhsuk-heading-l",
@@ -208,6 +208,27 @@ const fixtures = {
       visuallyHiddenText: "(Karen Francis)",
       caption: "About you",
       size: "l"
+    }
+  },
+  "with custom class and size": {
+    context: {
+      text: "What is your full name?",
+      className: "app-heading",
+      size: "s"
+    }
+  },
+  "with custom class and size as modifier": {
+    context: {
+      text: "What is your full name?",
+      className: "app-heading",
+      classPrefix: "app-heading--",
+      size: "s"
+    }
+  },
+  "without class": {
+    context: {
+      text: "What is your full name?",
+      className: false
     }
   }
 }
