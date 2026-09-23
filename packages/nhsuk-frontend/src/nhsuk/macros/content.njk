@@ -21,10 +21,29 @@
 {%- set hasContent = true if caller or params.html or (params.text is defined and params.text not in ["", null, false]) -%}
 {%- set hasVisuallyHidden = true if visuallyHidden.html or (visuallyHidden.text is defined and visuallyHidden.text not in ["", null, false]) -%}
 
+{#- Set visually hidden slots based on placement #}
+{%- set visuallyHiddenSlots = visuallyHidden.slots if visuallyHidden.slots is mapping and visuallyHidden.slots is not escaped else {
+  start: " " if hasContent and (visuallyHidden.placement == "end" or not visuallyHidden.placement) else undefined,
+  end: " " if hasContent and visuallyHidden.placement == "start" else undefined
+} -%}
+
 {%- if hasContent or hasVisuallyHidden %}
+{%- set visuallyHiddenHtml %}
+  {{- nhsukVisuallyHidden({
+    id: visuallyHidden.id,
+    text: visuallyHidden.text,
+    html: visuallyHidden.html,
+    classes: visuallyHidden.classes,
+    attributes: visuallyHidden.attributes,
+    placement: visuallyHidden.placement,
+    element: visuallyHidden.element,
+    slots: visuallyHiddenSlots
+  }) | trim -}}
+{% endset %}
+
 {%- set innerHtml %}
   {%- if visuallyHidden.placement == "start" %}
-    {{- nhsukVisuallyHidden(visuallyHidden) | trim -}}
+    {{- visuallyHiddenHtml | safe | trim -}}
   {% endif %}
 
   {%- if caller %}
@@ -36,12 +55,12 @@
   {% endif %}
 
   {%- if visuallyHidden.placement == "end" or (hasVisuallyHidden and not visuallyHidden.placement) %}
-    {{- nhsukVisuallyHidden(visuallyHidden) | trim -}}
+    {{- visuallyHiddenHtml | safe | trim -}}
   {% endif -%}
 {% endset %}
 
 {%- if visuallyHidden.placement == "before" %}
-  {{- nhsukVisuallyHidden(visuallyHidden) | trim -}}
+  {{- visuallyHiddenHtml | safe | trim -}}
 
   {{- "\n" | safe if hasContent -}}
 {% endif %}
@@ -51,7 +70,7 @@
 {%- if visuallyHidden.placement == "after" %}
   {{- "\n" | safe if hasContent -}}
 
-  {{- nhsukVisuallyHidden(visuallyHidden) | trim -}}
+  {{- visuallyHiddenHtml | safe | trim -}}
 {% endif %}
 {% endif %}
 {%- endmacro %}
