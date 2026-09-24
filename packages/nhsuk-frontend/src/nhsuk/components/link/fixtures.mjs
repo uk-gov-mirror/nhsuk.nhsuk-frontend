@@ -1,3 +1,5 @@
+import { components } from "#lib"
+
 /**
  * Nunjucks macro option examples
  *
@@ -7,6 +9,20 @@ const fixtures = {
   "default": {
     context: {
       text: "Change"
+    }
+  },
+  "with badge": {
+    context: {
+      html: `Referrals${components.render("badge", {
+        context: {
+          text: "New",
+          visuallyHidden: {
+            text: "feature",
+            placement: "end"
+          },
+          classes: "nhsuk-u-margin-left-2"
+        }
+      })}`
     }
   },
   "with text escaping": {
