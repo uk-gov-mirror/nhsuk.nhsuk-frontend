@@ -4,6 +4,8 @@
 {% set pageHeading = "Update your account details" %}
 
 {% block header %}
+{% include "partials/banner-header.njk" %}
+
   {{ header({
     service: {
       href: baseUrl,
@@ -23,7 +25,6 @@
       ]
     }
   }) }}
-  {% include "partials/banner-header.njk" %}
 {% endblock %}
 
 {% block beforeContent %}
